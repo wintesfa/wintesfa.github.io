@@ -1,0 +1,50 @@
+body {
+	background-color:white;
+	color: #404040;
+	font-size: 11pt;
+	font-family: Georgia, Garamond, san-serif;
+	background-image: url("silverware.jpg");
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #A4A400;
+	background-color: #F0F0F0;
+	font-family: "Lucida Sans Unicode", Helvetica, Arial, san-serif;
+	text-align: left;
+	font-size: 18pt;
+	text-decoration: underline;
+	letter-spacing: 0.25em;
+}
+h1 {
+	text-align: center;
+	font-size: 22pt;
+}
+a {
+	color: #A4A400;
+}
+abbr {
+	text-decoration: underline;
+}
+ins {
+	text-decoration: none;
+}
+pre {
+	padding-left: 0px;
+}
+
+/* Ids */
+#setup {
+	list-style-type: none;
+	padding-left: 0px;
+}
+#copyright {
+	font-family: mono-space;
+}
+#ingredients, #filling, #meringue {
+	list-style-image: url("pie_bullet.png");
+}
+
+/* Classes */
+.comments {
+	font-style: italic;
+	background-color: #FFFFA8;
+}
