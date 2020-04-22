@@ -1,9 +1,9 @@
 body {
-	background-color:white;
+	background-color:#F0F0F0;
 	color: #404040;
 	font-size: 11pt;
 	font-family: Georgia, Garamond, san-serif;
-	background-image: url("silverware.jpg");
+	background-image: url("images/silverware.jpg");
 }
 h1, h2, h3, h4, h5, h6 {
 	color: #A4A400;
@@ -40,7 +40,7 @@ pre {
 	font-family: mono-space;
 }
 #ingredients, #filling, #meringue {
-	list-style-image: url("pie_bullet.png");
+	list-style-image: url("images/pie_bullet.png");
 }
 
 /* Classes */
