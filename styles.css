@@ -1,0 +1,57 @@
+body {
+    background-image: url("1.png");
+    background-repeat: repeat;
+}
+
+
+/*********************W3C Validator properties*****************/
+#validator {
+    float: right;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    opacity: 50%;
+}
+
+#validator:hover {
+    opacity: 100%;
+}
+
+
+#assingments
+{
+    margin-left: 60px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+}
+
+h1
+{
+        font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+}
+
+
+/***********************animate********************************/
+.zoom {
+
+    display: inline-block;
+    transition: transform .2s;
+    margin-bottom: 10px;
+    /* Animation */
+
+
+}
+
+.zoom:hover {
+    transform: scale(1.5);
+    margin: auto;
+     flex-direction: column;
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+div .zoom
+{
+    display: inline-flex;
+    flex-direction: column;
+}
