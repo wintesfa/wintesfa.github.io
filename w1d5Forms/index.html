@@ -8,64 +8,67 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
-<div class="container">
-    <form>
-        <!--using form group from bootstrap-->
-
-        <!--using form group from bootstrap-->
-
-
-
-        <div class="form-group">
-            <label for="inputEmail1">Email address</label>
-            <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-
-        <!--password-->
-
-        <!--user can only submit the form if the Password field is at least 10 characters in length and contain at least one number and one uppercase and lowercase letter).-->
-        <div class="form-group">
-            <label for="inputPassword1">Password</label>
-            <input type="password" class="form-control" id="inputPassword1" placeholder="Password" required pattern="(?=.*[A-Z])(?=.*\d).{10,}" title="inlude atleast one letter and one number">
-        </div>
-
-
-        <!-- user must only enter a website url, and they must enter it beginning with either the string, "http://" or "https://".-->
-
-        <div class="form-group">
-            <label for="website">Web Full URL</label>
-            <input type="text" class="form-control" id="website" aria-describedby="emailHelp" placeholder="Enter email" required pattern="(https?:\/\/.+)|((http?:\/\/.+))" title="Please enter URL">
-        </div>
-
-
-
-
-        <!--checkbox-->
-        <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="check1">
-            <label class="form-check-label" for="check1">Check me out</label>
-        </div><br>
-
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-</div>
-
-
-<div id="validator">
-    <a href="https://validator.w3.org/check/referer">
-        <img src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png" alt="html validator" />
-    </a>
-
-
-
-    <a href="https://jigsaw.w3.org/css-validator/check/referer">
-        <img src="http://mumstudents.org/cs472/2013-09/images/w3c-css.png" alt="html validator" />
-    </a>
-</div>
-
 
 <body>
+
+    <div class="container">
+        <form>
+            <!--using form group from bootstrap-->
+
+            <!--using form group from bootstrap-->
+
+
+
+            <div class="form-group">
+                <label for="inputEmail1">Email address</label>
+                <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+
+            <!--password-->
+
+            <!--user can only submit the form if the Password field is at least 10 characters in length and contain at least one number and one uppercase and lowercase letter).-->
+            <div class="form-group">
+                <label for="inputPassword1">Password</label>
+                <input type="password" class="form-control" id="inputPassword1" placeholder="Password" required pattern="(?=.*[A-Z])(?=.*\d).{10,}" title="inlude atleast one letter and one number">
+            </div>
+
+
+            <!-- user must only enter a website url, and they must enter it beginning with either the string, "http://" or "https://".-->
+
+            <div class="form-group">
+                <label for="website">Web Full URL</label>
+                <input type="text" class="form-control" id="website" aria-describedby="emailHelp" placeholder="Enter email" required pattern="(https?:\/\/.+)|((http?:\/\/.+))" title="Please enter URL">
+            </div>
+
+
+
+
+            <!--checkbox-->
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="check1">
+                <label class="form-check-label" for="check1">Check me out</label>
+            </div><br>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+
+    <div id="validator">
+        <a href="https://validator.w3.org/check/referer">
+            <img src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png" alt="html validator" />
+        </a>
+
+
+
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img src="http://mumstudents.org/cs472/2013-09/images/w3c-css.png" alt="html validator" />
+        </a>
+    </div>
+
+
+
 
 
 </body></html>
