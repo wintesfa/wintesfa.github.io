@@ -14,21 +14,22 @@
 <body>
 
 
-    <nav class="navbar navbar-expand-lg bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">MUM Golden Dome Market : : : SRM System</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li>
+                <li class="nav-item active">
                     <a class="nav-link" href="#">MUM Golden Dome Market : : : SRM System <span class="sr-only">(current)</span></a>
                 </li>
-                <li>
+                <li class="nav-item">
                     <a class="nav-link" href="#">Products</a>
                 </li>
 
-                <li>
+                <li class="nav-item">
                     <a class="nav-link" href="#">Suppliers</a>
                 </li>
 
@@ -52,14 +53,14 @@
 
 
             <div class="row">
-                <div class="col">
+                <div class="col-md-6">
                     <label for="product">Product Number</label>
                     <input type="email" class="form-control" id="product" aria-describedby="emailHelp" required>
                 </div>
 
 
 
-                <div class="col">
+                <div class="col-md-6">
                     <label for="quantity">Quantity in Strock</label>
                     <input type="number" class="form-control" id="quantity" placeholder="0">
                 </div>
@@ -71,13 +72,13 @@
 
             <div class="row">
 
-                <div class="col">
+                <div class="col-md-6">
                     <label for="personName">Name</label>
                     <input type="text" class="form-control" id="personName">
                 </div>
 
 
-                <div class="col">
+                <div class="col-md-6">
                     <label for="supplier">Supplier</label>
                     <select class="form-control" id="supplier">
                         <option>Wallmart</option>
@@ -92,7 +93,7 @@
 
             <div class="row">
 
-                <div class="col">
+                <div class="col-md-6">
                     <label for="unitPrice">Unit Price</label>
                     <input type="number" class="form-control" id="unitPrice" placeholder="0.0">
                 </div>
@@ -103,7 +104,7 @@
 
                 <!-- user must only enter a website url, and they must enter it beginning with either the string, "http://" or "https://".-->
 
-                <div class="col">
+                <div class="col-md-6">
                     <label for="website">Date supplied</label>
                     <input type="date" class="form-control" id="website" aria-describedby="date" placeholder="date" required>
                 </div>
@@ -112,7 +113,7 @@
 
 
             </div>
-            <div id="bottomButtons">
+            <div row>
                 <button class="btn btn-light" type="submit">Reset</button>
                 <button class="btn btn-light" type="submit">Cancel</button>
                 <button class="btn btn-light" type="submit">Add Product</button>
