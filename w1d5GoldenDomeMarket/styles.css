@@ -1,32 +1,8 @@
-.container {
-    margin: 20px;
-}
 
 .nav-link,
 h5 {
     padding: 20px;
     color: aliceblue;
-}
-
-
-
-.container {
-
-    padding: 4px;
-}
-
-
-div div.form-group {
-    flex: 50%;
-}
-
-.rightContainer {}
-
-.leftContainer {}
-
-
-#bottomButtons {
-    float: left;
 }
 
 
