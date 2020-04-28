@@ -28,6 +28,20 @@ window.onload = function () {
     };
 
 
+
+    let timer = null; // stores ID of interval timer
+    document.getElementById("bigger_decorations").onclick =
+        function () {
+            if (timer === null) {
+                timer = setInterval(resize, 500);
+            } else {
+                clearInterval(timer);
+                timer = null;
+            }
+        };
+
+
+
 };
 
 function changeStyleFun() {
