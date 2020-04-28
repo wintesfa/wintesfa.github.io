@@ -1,5 +1,6 @@
 //functions
-
+/*jshint esversion: 6 */
+/*jshint strict: true */
 //max funtion to check the largest of two numbers
 function max(a, b) {
     if (a > b) {
@@ -23,7 +24,8 @@ function maxOfThree(a, b, c) {
 function isVowel(x) {
     let vowels = ['a', 'e', 'i', 'o', 'u'];
     for (let i = 0; i < vowels.length; i++) {
-        if (vowels[i] === x.ignoreCase) {
+        if (vowels[i] === x.ignoreCase)
+        {
             return true;
         }
         return false;
@@ -169,7 +171,7 @@ console.log("Expected output of sum([1,2,3,7]) is 13 " + myFunctionTest(13, sum(
 console.log("Expected output of multiply([2,3]) is 6 " + myFunctionTest(6, multiply([2, 3])));
 
 //reverse string
-console.log("Expected output of reverse('jim is a boy') is 'yob a si mij' " + myFunctionTest('yob a si mij', reverse("jim is a boy")));
+console.log("Expected output of reverse('hey how are you') is 'uoy era woh yeh' " + myFunctionTest('uoy era woh yeh', reverse("hey how are you")));
 
 //check longest word
 console.log("Expected output of findLongestWord(['go', 'come', 'stay', 'going']) is 5 " + myFunctionTest(5, findLongestWord(['go', 'come', 'stay', 'going'])));
@@ -186,7 +188,7 @@ console.log("Expected output of filterLongWords(['hello', 'hey', 'goodMorning'])
 //myFuntionTest2 test assert
 function myFunctionTest2(expected, found) {
 
-    if (Array.isArray(expected)) { //if array is passed then use JSON.stringify to check if values in an array match 
+    if (Array.isArray(expected)) { //if array is passed then use JSON.stringify to check if values in an array match
         if (JSON.stringify(expected) === JSON.stringify(found)) {
             return true;
         } else {
@@ -219,7 +221,7 @@ console.assert(myFunctionTest2(13, sum([1, 2, 3, 7])), 'Expected output of sum([
 console.assert(myFunctionTest2(6, multiply([2, 3])), 'Expected output of multiply([2, 3]) is 6');
 
 //reverse string
-console.assert(myFunctionTest2('yob a si mij', reverse('jim is a boy')), "Expected output of reverse('jim is a boy') is 'yob a si mij'");
+console.assert(myFunctionTest2('uoy era woh yeh', reverse('hey how are you')), "Expected output of reverse('hey how are you') is 'uoy era woh yeh'");
 
 //check longest word
 console.assert(myFunctionTest2(5, findLongestWord(['hi', 'hey', 'bye', 'going'])), "Expected output of findLongestWord(['hi', 'hey', 'bye', 'going']) is 5");
@@ -229,13 +231,6 @@ console.assert(myFunctionTest2(5, findLongestWord(['hi', 'hey', 'bye', 'going'])
 input = new Array('hello', 'hi', 'hey', 'goodMorning');
 expected = new Array('hello', 'goodMorning');
 console.assert(myFunctionTest2(expected, filterLongWords(input, 4)), " expected output " + expected);
-
-
-
-
-
-
-
 
 
 

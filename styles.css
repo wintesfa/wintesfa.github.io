@@ -53,6 +53,7 @@ div.zoom > div {
 .zoom {
 
     display: inline-block;
+    padding: 4px;
     transition: transform .2s;
     margin-bottom: 10px;
     /* Animation */
