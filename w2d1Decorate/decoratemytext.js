@@ -15,14 +15,14 @@ window.onload = function () {
     function changeTestSize() {
         let textarea = document.getElementById("myText");
         textarea.style.fontSize = "24pt";
+        document.getElementById("bigger_decorations").onclick = resize;
     }
 
     let chkbx = document.getElementById("blingcbox");
     chkbx.onchange = function () {
-        if(chkbx.checked) {
+        if (chkbx.checked) {
             changeStyleFun();
-        }
-        else {
+        } else {
             changeBack();
         }
     };
@@ -39,6 +39,7 @@ function changeStyleFun() {
     textarea.style.textDecoration = "underline";
 
 }
+
 function changeBack() {
     //alert("styled up");
     "use strict";
@@ -46,5 +47,18 @@ function changeBack() {
     textarea.style.fontWeight = "";
     textarea.style.color = "black";
     textarea.style.textDecoration = "none";
+
+
+
+
+}
+
+
+function resize() {
+    "use strict";
+    //alert("Hello, world!");
+    let textarea = document.getElementById("myText");
+    //textarea.style.fontSize = "24pt";
+    textarea.style.fontSize = parseInt(textarea.style.fontSize) + 2 + 'pt';
 
 }
