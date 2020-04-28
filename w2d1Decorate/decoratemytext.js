@@ -17,17 +17,34 @@ window.onload = function () {
         textarea.style.fontSize = "24pt";
     }
 
-    document.getElementById("blingcbox").onchange = changeStyleFun;
+    let chkbx = document.getElementById("blingcbox");
+    chkbx.onchange = function () {
+        if(chkbx.checked) {
+            changeStyleFun();
+        }
+        else {
+            changeBack();
+        }
+    };
 
 
 };
 
-function changeStyleFun(){
+function changeStyleFun() {
     //alert("styled up");
     "use strict";
     let textarea = document.getElementById("myText");
     textarea.style.fontWeight = "bold";
     textarea.style.color = "green";
     textarea.style.textDecoration = "underline";
+
+}
+function changeBack() {
+    //alert("styled up");
+    "use strict";
+    let textarea = document.getElementById("myText");
+    textarea.style.fontWeight = "";
+    textarea.style.color = "black";
+    textarea.style.textDecoration = "none";
 
 }
