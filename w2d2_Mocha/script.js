@@ -10,101 +10,91 @@
 
 
 /*jshint esversion: 6 */
-function sum(array) {
+
+(function() {
     "use strict";
-    return array.reduce((a,b)=> a+b);
-}
+    function loadPage(){
+
+    }
+
+
+    function sum(array) {
+        return array.reduce((a,b)=> a+b);
+    }
 
 
 //function multiply
-function multiply(array) {
-    "use strict";
-    let total = 1;
-    for (let i = 0; i < array.length; i++) {
-        total *= array[i];
+    function multiply(array) {
+        return array.reduce((a,b)=> a*b);
     }
-    return total;
-}
-/* 5 Define a function reverse() that computes the reversal of a string.
- */
+
+
 //function reverse using reduce
-function reverse(string) {
-    "use strict";
-    return string.split('').reduce((r, c)=> c + r);
-}
+    function reverse(string) {
+        return string.split('').reduce((r, c)=> c + r);
+    }
 
 
-
-/* 7 Write a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
- */
 //function filter using filter
-function filterLongWords(words, i) {
-    "use strict";
-    return words.filter(w => w.length > i);
-}
-
-
-
-
-//TEST FUNCTIONS
-function myFunctionTest(expected, found) {
-    "use strict";
-    if (Array.isArray(expected)) { //if array is passed then use JSON.stringify to check if values in an array match
-        if (JSON.stringify(expected) === JSON.stringify(found)) {
-            return "TEST SUCCEEDED";
-        } else {
-            return "TEST FAILED.  Expected " + expected + " found " + found;
-        }
+    function filterLongWords(words, i) {
+        return words.filter(w => w.length > i);
     }
 
-    if (expected === found) {
-        return "TEST SUCCEEDED";
-    } else {
-        return "TEST FAILED.  Expected " + expected + " found " + found;
-    }
-}
-
-function myFunctionTest2(expected, found) {
-    "use strict";
-    if (Array.isArray(expected)) { //if array is passed then use JSON.stringify to check if values in an array match
-        if (JSON.stringify(expected) === JSON.stringify(found)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    if (expected === found) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
-
-//TESTS
-//sum
-console.log("Expected output of sum([1,2,3,7]) is 13 " + myFunctionTest(13, sum([1, 2, 3, 7])));
-//multiply
-console.log("Expected output of multiply([2,3]) is 6 " + myFunctionTest(6, multiply([2, 3])));
-//reverse string
-console.log("Expected output of reverse('hey how are you') is 'uoy era woh yeh' " + myFunctionTest('uoy era woh yeh', reverse("hey how are you")));
-//filtering long words
-let input = new Array('hello', 'hi', 'hey', 'goodMorning');
-let expected = new Array('hello', 'goodMorning');
-console.log("Expected output of filterLongWords(['hello', 'hey', 'goodMorning']) is ['hello', 'hi', 'hey', 'goodMorning'] " + myFunctionTest(expected, filterLongWords(input, 3)));
 
 
 
-//TEST with ASSERT
-//sum
-console.assert(myFunctionTest2(13, sum([1, 2, 3, 7])), 'Expected output of sum([1, 2, 3, 7]) is 13');
-//multiply
-console.assert(myFunctionTest2(6, multiply([2, 3])), 'Expected output of multiply([2, 3]) is 6');
-//filtering long words
-input = new Array('hello', 'hi', 'hey', 'goodMorning');
-expected = new Array('hello', 'goodMorning');
-console.assert(myFunctionTest2(expected, filterLongWords(input, 4)), " expected output " + expected);
+
+
+
+
+
+
+    /* calculator.read();
+     console.log(`sum is  ${calculator.sum()}`); */
+
+
+    describe("calculator", function() {
+
+        //test for sum
+        context("when array of [1,2,3,4] entered", function() {
+            it("the sum is 10", function() {
+                let res = sum([1,2,3,4]);
+                assert.equal(res, 10);
+            });
+        });
+
+        //test for multiply
+        context("when array of [1,2,3,4] entered", function() {
+            it("the multiplied result is 24", function() {
+                let res = multiply([1,2,3,4]);
+                assert.equal(res, 24);
+            });
+        });
+
+        //test for reverse
+        context("when string of \"hello how are you\" entered", function() {
+            it("the result is \"uoy era woh olleh\"", function() {
+                let res = reverse("hello how are you");
+                assert.equal(res, "uoy era woh olleh");
+            });
+        });
+
+        //test for filterLongWords
+        context("when array of words [\'hey'\,\'hello'\,\'perfect'\,\'excellent'\,\'great'\,\'hi'\] entered", function() {
+            it("words with less than 3 alphabets are filtered [\"hello\", \"perfect\", \"excellent\", \"great\"] ", function() {
+                let res = filterLongWords(["hey","hello","perfect","excellent","great","hi"],3);
+                assert.equal(JSON.stringify(res), JSON.stringify(["hello", "perfect", "excellent", "great"]));
+            });
+        });
+
+
+    });
+
+window.onload = loadPage();
+}());
+
+
+
 
 
 

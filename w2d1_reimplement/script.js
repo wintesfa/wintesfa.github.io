@@ -19,11 +19,7 @@ function sum(array) {
 //function multiply
 function multiply(array) {
     "use strict";
-    let total = 1;
-    for (let i = 0; i < array.length; i++) {
-        total *= array[i];
-    }
-    return total;
+    return array.reduce((a,b)=> a*b);
 }
 /* 5 Define a function reverse() that computes the reversal of a string.
  */
