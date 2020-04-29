@@ -53,7 +53,7 @@
      console.log(`sum is  ${calculator.sum()}`); */
 
 
-    describe("calculator", function() {
+    describe("Mocha Tests", function() {
 
         //test for sum
         context("when array of [1,2,3,4] entered", function() {
