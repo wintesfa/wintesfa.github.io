@@ -51,3 +51,16 @@ select{
 {
     font-size: medium;
 }
+
+/*********************W3C Validator properties*****************/
+#validator {
+    float: right;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    opacity: 50%;
+}
+
+#validator:hover {
+    opacity: 100%;
+}
