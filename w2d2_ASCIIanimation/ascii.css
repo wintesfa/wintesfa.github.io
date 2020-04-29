@@ -46,3 +46,8 @@ select{
     right:0px;
     position: fixed;
 }
+
+.fontsize
+{
+    font-size: medium;
+}
