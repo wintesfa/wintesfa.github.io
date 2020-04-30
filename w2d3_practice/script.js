@@ -87,7 +87,18 @@ function prepend(val, res) {
 
 
 
-function nth(){}
+function nth(list, index) {
+    "use strict";
+    let i = 0;
+    while (list != null && list.value != null) {
+        if (i == index) {
+            return list.value;
+        }
+        list = list.rest;
+        i++;
+    }
+    return null;
+}
 
 
 //**********TESTS*******************************************************************************************************
