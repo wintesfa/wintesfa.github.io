@@ -100,7 +100,32 @@ function nth(list, index) {
     return null;
 }
 
-function deepEqual(){}
+function deepEqual(obj1, obj2) {
+    "use strict";
+    if (Object.keys(obj1).length !== Object.keys(obj2).length) {
+        return false;
+    }
+    if (typeof (obj1) !== typeof (obj2)) {
+        return false;
+    }
+
+    if (typeof (obj1) === "object") {
+        for(let key in obj1) {
+            return deepEqual(obj1[key], obj2[key]);
+        }
+    } else {
+        if (obj1 === obj2) {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+}
+
+
 
 
 
@@ -169,18 +194,46 @@ function mochaTests() {
         });
 
 
-        //     let obj = {here: {is: "an"}, object: 2};
-//     console.log(deepEqual(obj, obj));
-// // → true
-//     console.log(deepEqual(obj, {here: 1, object: 2}));
-// // → false
+
+
+
 //     console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
 // // → true
 
 
-        it("deepEqual(obj, notequal) -> false", function () {
-            assert.equal(deepEqual(list, {here : {is : "an"}, object : 2}), false);
+        //deepEqual
+        context("Deep eqaul Tests", function () {
+            //     let obj = {here: {is: "an"}, object: 2};
+            //     console.log(deepEqual(obj, obj));
+            // // → true
+            let obj = {here: {is: "an"}, object: 2};
+
+            it("1. deepEqual(obj, notequal) -> false", function () {
+                let res = deepEqual(obj, obj);
+                assert.equal(res, true);
+            });
+
+            //     console.log(deepEqual(obj, {here: 1, object: 2}));
+            // // → false
+            it("2. deepEqual(obj, {here: 1, object: 2}) -> false", function () {
+                let obj = {here: {is: "an"}, object: 2};
+                let res = deepEqual(obj, {here: 1, object: 2});
+                assert.equal(res, false);
+            });
+
+
+            //     console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
+            // // → true
+            it("3. deepEqual(obj, {here: {is: \"an\"}, object: 2}) -> false", function () {
+                let obj = {here: {is: "an"}, object: 2};
+                let res = deepEqual(obj, {here: {is: "an"}, object: 2});
+                assert.equal(res, true);
+            });
+
         });
+
+
+
 
     });
 
