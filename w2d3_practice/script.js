@@ -100,6 +100,9 @@ function nth(list, index) {
     return null;
 }
 
+function deepEqual(){}
+
+
 
 //**********TESTS*******************************************************************************************************
 function mochaTests() {
@@ -165,5 +168,20 @@ function mochaTests() {
             });
         });
 
+
+        //     let obj = {here: {is: "an"}, object: 2};
+//     console.log(deepEqual(obj, obj));
+// // → true
+//     console.log(deepEqual(obj, {here: 1, object: 2}));
+// // → false
+//     console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
+// // → true
+
+
+        it("deepEqual(obj, notequal) -> false", function () {
+            assert.equal(deepEqual(list, {here : {is : "an"}, object : 2}), false);
+        });
+
     });
+
 }
