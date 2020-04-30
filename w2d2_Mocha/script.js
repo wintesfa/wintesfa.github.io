@@ -1,3 +1,14 @@
+
+
+//1.  Re-implement the following exercises from Lab 5 to use map/filter/reduce Array methods instead of for loops. 
+// Follow the instructions for submitting your code from Lab 5.
+/* 4 Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers
+ */
+//function sum
+
+
+
+
 /*jshint esversion: 6 */
 
 (function() {
@@ -30,7 +41,7 @@
     }
 
 
-//********** Mocha test **********
+//Mocha test **********
 
     describe("Mocha Tests", function() {
 
