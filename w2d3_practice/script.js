@@ -2,9 +2,8 @@
 
 (function () {
     "use strict";
-
     function loadPage() {
-        mochaTests();
+        console.log(mochaTests);
     }
 
     window.onload = loadPage();
