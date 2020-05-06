@@ -4,7 +4,7 @@
 
 class Bank {
     //static next Number that tracks the next account number
-    static nextNumber = 64001;
+    static nextNumber = 1;
     //constructor
     constructor() {
         this.bankAccounts = [];

@@ -3,28 +3,6 @@
 'use strict';
 
 
-
-//test Account
-describe("Account-Savings Test", function(){
-
-    let mysavings = new SavingsAccount('123456');
-    mysavings.deposit(1200);
-    mysavings.setInterest(10);
-    mysavings.addInterest();
-    // alert(mysavings.toString());
-
-    it('Expected output of getInterest() after setInterest(10) is 10', function () {
-        assert.equal(mysavings.getInterest(), 10);
-    });
-    it('Expected output of getBalance() after smysavings.addInterest(); is 1320', function () {
-        assert.equal(mysavings.getBalance(), 1320);
-    });
-    it('Expected output of toString() after call to mysavings.toString(); is Account 0141075400: balance 148500: interest 10', function () {
-        assert.equal(mysavings.toString(), 'Account 123456: balance 1320: interest 10');
-    });
-});
-
-
 //test account
 describe("Account Test", function(){
     let account = new Account(1234);
@@ -54,29 +32,26 @@ describe("Account Test", function(){
 });
 
 
-describe("Bank Test", function () {
-    let bankOfAmerica = new Bank();
 
-    //test bankOfAmerica.addAccount()
-    it("addAccount() returns 64001", function () {
-        assert.equal(bankOfAmerica.addAccount(), 64001);
+//test Account
+describe("Account-Savings Test", function(){
+
+    let mysavings = new SavingsAccount('123456');
+    mysavings.deposit(1200);
+    mysavings.setInterest(10);
+    mysavings.addInterest();
+    // alert(mysavings.toString());
+
+    it('Expected output of getInterest() after setInterest(10) is 10', function () {
+        assert.equal(mysavings.getInterest(), 10);
     });
-    //test bankOfAmerica.addSavingsAccount(10)
-    it("addSavingsAccount(10) returns 64002", function () {
-        assert.equal(bankOfAmerica.addSavingsAccount(10), 64002);
+    it('Expected output of getBalance() after smysavings.addInterest(); is 1320', function () {
+        assert.equal(mysavings.getBalance(), 1320);
     });
-    //test bankOfAmerica.addCheckingAccount(1000)
-    it("addCheckingAccount(1000) returns 64003", function () {
-        assert.equal(bankOfAmerica.addCheckingAccount(1000), 64003);
-    });
-    //test accountReport()
-    it("closeAccount(64002) and toString() returns all accounts without 64002", function () {
-        //closeAccount(64002)
-        bankOfAmerica.closeAccount(64002);
-        assert.equal(bankOfAmerica.accountReport(), "Account 64001: balance 0\nAccount 64003: balance 0: Overdraft_limit 1000\n");
+    it('Expected output of toString() after call to mysavings.toString(); is Account 0141075400: balance 148500: interest 10', function () {
+        assert.equal(mysavings.toString(), 'Account 123456: balance 1320: interest 10');
     });
 });
-
 
 //CHECKING ACCOUNT
 describe("Checkings Test ", function () {
@@ -92,4 +67,32 @@ describe("Checkings Test ", function () {
         assert.equal(mychecking.toString(), 'Account 110110075: balance -10000: Overdraft_limit 10000');
     });
 });
+
+
+describe("Bank Test", function () {
+    let bankOfAmerica = new Bank();
+
+    //test bankOfAmerica.addAccount()
+    it("addAccount() returns 1", function () {
+        assert.equal(bankOfAmerica.addAccount(), 1);
+    });
+    //test bankOfAmerica.addSavingsAccount(10)
+    it("addSavingsAccount(10) returns 2", function () {
+        assert.equal(bankOfAmerica.addSavingsAccount(10), 2);
+    });
+    //test bankOfAmerica.addCheckingAccount(1000)
+    it("addCheckingAccount(1000) returns 3", function () {
+        assert.equal(bankOfAmerica.addCheckingAccount(1000), 3);
+    });
+    //test accountReport()
+    it("closeAccount(64002) and toString() returns all accounts without 2", function () {
+        //closeAccount(64002)
+        bankOfAmerica.closeAccount(2);
+
+        assert.equal(bankOfAmerica.accountReport(), "Account 1: balance 0\nAccount 3: balance 0: Overdraft_limit 1000\n");
+    });
+});
+
+
+
 
