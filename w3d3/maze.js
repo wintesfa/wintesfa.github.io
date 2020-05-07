@@ -1,10 +1,9 @@
-/*jshint  esversion:6, globalstrict:true */
-'use strict';
+
+// 'use strict';
 
 $(document).ready(function(){
 
-    let looser = false;
-
+    var looser = false;
     $('div.boundary').on('mouseenter',function(){
         $('div.boundary').addClass('youlose');
         $('h2#status').html('You lose');
