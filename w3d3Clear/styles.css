@@ -1,0 +1,13 @@
+.circle{
+    top: 200px;
+    width : 200px;
+    height : 200px;
+    background-color: #101C1C;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+
+/*.circle.animate {*/
+/*    transform: scale(1);*/
+/*}*/

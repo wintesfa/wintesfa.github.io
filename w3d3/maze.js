@@ -6,7 +6,7 @@ $(document).ready(function(){
     let lostGame = false;
     $('div.boundary').on('mouseenter',function(){
         $('div.boundary').addClass('youlose');
-        $('h2#status').html('You lose &#128532;');
+        $('h2#status').html('You lose &#128532;');d
         lostGame = true;
     });
 
